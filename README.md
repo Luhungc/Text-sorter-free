@@ -1,2 +1,2 @@
-# Text-sorter-free
-Just text sorter free, try it.
+# Text Sorter
+It's free, Don't sell it
