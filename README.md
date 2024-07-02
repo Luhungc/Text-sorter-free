@@ -1,2 +1,3 @@
 # Text Sorter
-It's free, Don't sell it
+Just a text sorter, nothing special.
+Currently it can only be Ascending and Descending.
