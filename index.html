@@ -39,11 +39,10 @@
     <button onclick="sortText('desc')">Descending</button>
     <button onclick="copyText()">Copy results</button>
     <div id="result"></div>
-
     <script>
         function sortText(order) {
             const inputText = document.getElementById('inputText').value;
-            const lines = inputText.split('\n').filter(line => line.trim() !== '');
+            const lines = inputText.split('\n').filter(line => line !== '');
             lines.sort((a, b) => order === 'asc' ? a.localeCompare(b) : b.localeCompare(a));
             const result = lines.map((line, index) => {
                 const className = index % 2 === 0 ? 'line-even' : 'line-odd';
