@@ -42,12 +42,13 @@
     <script>
         function sortText(order) {
             const inputText = document.getElementById('inputText').value;
-            const lines = inputText.split('\n').filter(line => line !== '');
+            const lines = inputText.split('\n');
             lines.sort((a, b) => order === 'asc' ? a.localeCompare(b) : b.localeCompare(a));
             const result = lines.map((line, index) => {
+                if (line === '') return line;
                 const className = index % 2 === 0 ? 'line-even' : 'line-odd';
                 return `<div class="line ${className}">${line}</div>`;
-            }).join('');
+            }).join('\n');
             document.getElementById('result').innerHTML = result;
         }
 
